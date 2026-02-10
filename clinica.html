@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Experiência</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body class="body_clinica">
+
+    <header class="header">
+    <nav class="nav">
+        <a href="index.html"><img src="img/Logo.png" width="150px"></a>
+        <a href="sobre.html">Sobre mim</a>
+        <a href="clinica.html">Estética</a>
+        <a href="feedback.html">Feedback</a>
+    </nav>
+
+    <section class="experiencia">
+        <div class="experiencia-image">
+            <img src="img/foto inicial.png">
+        </div>
+
+        <div class="experiencia-text">
+            <p>
+                Formei-me em Estética pela **[Universidade/Instituição]**, integrando a **turma de [ano]**, onde construí uma base sólida e prática.
+                Ao longo da formação, participei de projetos e cursos complementares que ampliaram minha visão profissional.
+                Atualmente, atuo em minha clínica, um espaço pensado para cuidado, acolhimento e bem-estar.
+                A clínica está localizada na **[Rua/Endereço – bairro e cidade]**, atendendo com dedicação e profissionalismo.
+            </p>
+
+            <p>
+                Atualmente trabalho em minha própria clínica
+                especializada com 10 funcionários e muito amor.
+            </p>
+        </div>
+    </section>
+
+<script>
+    const linksNav = document.querySelectorAll(".nav a");
+
+    pink = (e) =>{
+        e.style.color = "pink";
+    }
+
+    for (const link of linksNav){
+
+        link.style.color = "white";
+
+        link.addEventListener("mouseover", () => pink(link));
+
+        link.addEventListener("mouseout", () => {
+            link.style.color = "white";
+        });
+
+        link.addEventListener("click", () => {
+            link.style.color = "blue";
+            link.innerHTML = "Clicou <b>AQUI!</b>";
+        });
+
+    }
+</script>
+
+</body>
+</html>
+

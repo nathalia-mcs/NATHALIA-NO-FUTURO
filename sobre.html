@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Sobre mim</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body class="body_sobre">
+
+    <main class="about">
+
+        <header class="header">
+    <nav class="nav">
+        <a href="index.html"><img src="img/Logo.png" width="150px"></a>
+        <a href="sobre.html">Sobre mim</a>
+        <a href="clinica.html">Estética</a>
+        <a href="feedback.html">Feedback</a>
+    </nav>
+</header>
+
+
+        <section class="about-text">
+            <h1>
+                Prazer em conhecê-la.<br>
+                Meu nome é<br>
+                Nathalia.
+            </h1>
+
+            <p>
+                Sou uma mulher multifacetada, movida pelo amor à família e pela vontade constante de evoluir.
+                Mãe dedicada, encontro nos meus filhos a maior fonte de força e inspiração diária.
+                Sou formada em Estética e técnica em Informática para Internet, unindo cuidado, criatividade e tecnologia.
+                Coleciono outros diplomas que refletem minha sede por aprendizado e crescimento.
+                Entre estudos, trabalho e hobbies, construo minha história com propósito e paixão.
+            </p>
+        </section>
+
+        <section class="imgs_Sobre">
+            <div class="img1"> <img src="img/nat_consultorio.png" width="300px"> </div>
+            <div class="img2"> <img src="img/casal_consultorio.png" width="300px"></div>
+            <div class="img3"> <img src="img/Família.png" width="300px"> </div>
+        </section>
+
+    </main>
+
+    <section class="profile">
+    <div class="profile-text">
+
+        <ul>
+            <li><strong>Nascimento:</strong> 26 de setembro de 2008 (28 anos)</li>
+            <li><strong>Local:</strong> Natal, Rio Grande do Norte</li>
+            <li><strong>Pais:</strong> Maria e João</li>
+            <li><strong>Nome completo:</strong> Nathalia Mileni Cordeiro da Silva</li>
+            <li><strong>Altura:</strong> 1,62 m</li>
+            <li><strong>Estatura:</strong> 1,62 m</li>
+            <li><strong>Filho(a)(s):</strong> 1</li>
+            <li><strong>Prêmios:</strong> Lista</li>
+        </ul>
+    </div>
+
+    <div class="imagemSobre">
+        <img src="img/foto inicial.png" width="300px">
+    </div>
+</section>
+
+
+<script>
+    const linksNav = document.querySelectorAll(".nav a");
+
+    pink = (e) =>{
+        e.style.color = "pink";
+    }
+
+    for (const link of linksNav){
+
+        link.style.color = "white";
+
+        link.addEventListener("mouseover", () => pink(link));
+
+        link.addEventListener("mouseout", () => {
+            link.style.color = "white";
+        });
+
+        link.addEventListener("click", () => {
+            link.style.color = "blue";
+            link.innerHTML = "Clicou <b>AQUI!</b>";
+        });
+
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Depoimentos</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body class="body_feedback">
+
+<header class="header">
+    <nav class="nav">
+        <a href="index.html"><img src="img/Logo.png" width="100px"></a>
+        <a href="sobre.html">Sobre mim</a>
+        <a href="clinica.html">Estética</a>
+        <a href="feedback.html">Feedback</a>
+    </nav>
+</header>
+
+<main class="feedback">
+    <center>
+    <h1>O que dizem sobre mim</h1>
+    <p class="feedback-subtitle">
+        A experiência de quem já passou pela clínica 🤍
+    </p>
+    </center>
+
+    <form class="feedback-form">
+        <div class="input-group">
+            <label>Nome (opcional)</label>
+            <input type="text" placeholder="Seu nome">
+        </div>
+
+        <div class="input-group">
+            <label>Serviço realizado</label>
+            <input type="text" placeholder="Ex: Limpeza de pele">
+        </div>
+
+        <div class="input-group">
+            <label>Avaliação</label>
+            <select>
+                <option>⭐</option>
+                <option>⭐⭐</option>
+                <option>⭐⭐⭐</option>
+                <option>⭐⭐⭐⭐</option>
+                <option>⭐⭐⭐⭐⭐</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label>Depoimento</label>
+            <textarea placeholder="Conte como foi sua experiência"></textarea>
+        </div>
+
+        <button type="submit">Enviar depoimento</button>
+        <p id="mensagemSucesso" class="mensagem-sucesso"></p>
+
+    </form>
+</main>
+
+
+<script>
+const form = document.querySelector('.feedback-form');
+
+form.addEventListener('submit', function(e) {
+    e.preventDefault(); // impede recarregar a página
+    alert('Depoimento enviado com sucesso! 🤍');
+});
+
+    const linksNav = document.querySelectorAll(".nav a");
+
+    pink = (e) =>{
+        e.style.color = "pink";
+    }
+
+    for (const link of linksNav){
+
+        link.style.color = "white";
+
+        link.addEventListener("mouseover", () => pink(link));
+
+        link.addEventListener("mouseout", () => {
+            link.style.color = "white";
+        });
+
+        link.addEventListener("click", () => {
+            link.style.color = "blue";
+            link.innerHTML = "Clicou <b>AQUI!</b>";
+        });
+
+    }
+</script>
+
+</body>
+</html>
